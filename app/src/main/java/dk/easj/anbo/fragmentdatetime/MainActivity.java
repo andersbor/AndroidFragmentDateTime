@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public void timeViewClicked(View view) {
         Log.d("MINE", "Activity handled event ...");
         TextView outputView = findViewById(R.id.outputView);
-        outputView.setText("Event handled by activity, not by fragment");
+        counter++;
+        outputView.setText("Event handled by activity, not by fragment " + counter);
     }
 }
