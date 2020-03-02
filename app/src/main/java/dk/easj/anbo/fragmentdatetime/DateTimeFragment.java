@@ -1,7 +1,5 @@
 package dk.easj.anbo.fragmentdatetime;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -17,7 +15,8 @@ import java.util.Date;
 
 public class DateTimeFragment extends Fragment {
     private static final String DATE_TIME = "dateTime";
-    public static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("d MMM yyyy HH:mm.ss");
+    public static final SimpleDateFormat SIMPLE_DATE_FORMAT
+            = new SimpleDateFormat("d MMM yyyy HH:mm.ss");
     private String time;
 
     public DateTimeFragment() {
@@ -40,10 +39,10 @@ public class DateTimeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_date_time, container, false);
-        final TextView textView = (TextView) view.findViewById(R.id.last_view_time);
+        final TextView textView = view.findViewById(R.id.last_view_time);
         textView.setText(time);
 
-        Button button = (Button) view.findViewById(R.id.buttonLocal);
+        Button button = view.findViewById(R.id.buttonLocal);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

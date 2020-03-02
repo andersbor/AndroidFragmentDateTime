@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
     public void timeViewClicked(View view) {
         Log.d("MINE", "Activity handled event ...");
         TextView outputView = findViewById(R.id.outputView);
@@ -23,3 +22,5 @@ public class MainActivity extends AppCompatActivity {
         outputView.setText("Event handled by activity, not by fragment " + counter);
     }
 }
+
+
