@@ -1,7 +1,7 @@
 package dk.easj.anbo.fragmentdatetime;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,10 +12,8 @@ import android.widget.TextView;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
 public class DateTimeFragment extends Fragment {
-    private static final String DATE_TIME = "dateTime";
-    public static final SimpleDateFormat SIMPLE_DATE_FORMAT
+    private static final SimpleDateFormat SIMPLE_DATE_FORMAT
             = new SimpleDateFormat("d MMM yyyy HH:mm.ss");
     private String time;
 
